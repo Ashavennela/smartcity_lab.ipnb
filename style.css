@@ -1,0 +1,10 @@
+:root{--bg:#f7f9fb;--card:#fff;--accent:#2b6cb0}
+body{font-family:Segoe UI, Arial; background:var(--bg); margin:0; padding:40px}
+.container{max-width:680px;margin:0 auto;background:var(--card);padding:24px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+h1{margin-top:0;font-size:1.2rem;color:#111}
+.form label{display:block;margin-bottom:12px;font-size:.95rem}
+.form input[type="text"], .form input[type="email"], .form select, .form textarea{width:100%;padding:8px;border:1px solid #dfe7ef;border-radius:4px;margin-top:4px}
+.form textarea{min-height:80px;resize:vertical}
+.form button{background:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:4px;cursor:pointer}
+.result{margin-top:18px;padding:12px;border-radius:6px;background:#e6fffa;border:1px solid #b2f5ea}
+.hidden{display:none}

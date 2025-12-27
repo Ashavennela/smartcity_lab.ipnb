@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "ref_id": "SC-20251225-6542",
+    "city": "Riverside",
+    "area": "Northside",
+    "street": "water tank street",
+    "issue_type": "Broken Streetlight",
+    "description": "test",
+    "email": "ashavenelarapa7569@gmail.com",
+    "status": "accepted",
+    "created_at": "2025-12-25T05:47:02.473414",
+    "verified_at": null
+  },
+  {
+    "id": 2,
+    "ref_id": "SC-20251225-7567",
+    "city": "Metroville",
+    "area": "Northside",
+    "street": "church street",
+    "issue_type": "Broken Streetlight",
+    "description": "",
+    "email": "ashavennelarapa7569@gmail.com",
+    "status": "accepted",
+    "created_at": "2025-12-25T05:50:49.853664",
+    "verified_at": null
+  },
+  {
+    "id": 3,
+    "ref_id": "SC-20251225-5792",
+    "city": "Riverside",
+    "area": "Northside",
+    "street": "water tank street",
+    "issue_type": "Broken Streetlight",
+    "description": "automated test",
+    "email": "ashavenelarapa7569@gmail.com",
+    "status": "accepted",
+    "created_at": "2025-12-25T06:17:51.602954",
+    "verified_at": null
+  },
+  {
+    "id": 4,
+    "ref_id": "SC-20251225-6343",
+    "city": "Riverside",
+    "area": "Northside",
+    "street": "raju gari street",
+    "issue_type": "Broken Streetlight",
+    "description": "",
+    "email": "ashavennelarapa@gmail.com",
+    "status": "accepted",
+    "created_at": "2025-12-25T06:19:35.870214",
+    "verified_at": null
+  },
+  {
+    "id": 5,
+    "ref_id": "SC-20251225-2537",
+    "city": "Riverside",
+    "area": "Suburbs",
+    "street": "water tank street",
+    "issue_type": "Broken Streetlight",
+    "description": "Form test run",
+    "email": "ashavenelarapa7569@gmail.com",
+    "status": "accepted",
+    "created_at": "2025-12-25T17:35:44.528750",
+    "verified_at": null
+  },
+  {
+    "id": 6,
+    "ref_id": "SC-20251225-2162",
+    "city": "Riverside",
+    "area": "Northside",
+    "street": "church street",
+    "issue_type": "Broken Streetlight",
+    "description": "",
+    "email": "ashavennelarapa@gmail.com",
+    "status": "accepted",
+    "created_at": "2025-12-25T17:44:44.037127",
+    "verified_at": null
+  }
+]

@@ -1,25 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart City Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to Smart City Project</h1>
-    <p>This is my smart city project website.</p>
-    <p>More content coming soon!</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Smart City - Report Broken Streetlight</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <h1>Smart City — Report a Broken Streetlight</h1>
+        <p class="subtitle">Quickly report a broken streetlight and get confirmation. Sensor-based verification (LDR) can mark issues as Verified.</p>
+        <div style="margin-top:10px">
+          <span id="serverStatus" class="badge">Server: unknown</span>
+          <div id="serverMessage" class="message-box" style="display:inline-block;margin-left:12px;vertical-align:middle;">Checking...</div>
+          <button id="simulateOfflineBtn" class="btn ghost" style="margin-left:12px">Simulate offline</button>
+        </div>
+        <div id="offlineBanner" class="message-box" style="display:none;margin-top:8px;background:#fee2e2;color:#9f1239;padding:8px;border-radius:4px;">
+          <strong>Backend unreachable</strong> — This is a simulated offline mode. Toggle off to resume health checks.
+        </div>
+        <div id="onlineBanner" class="message-box" style="display:none;margin-top:8px;background:#ecfdf5;color:#065f46;padding:8px;border-radius:4px;">
+          <strong>Backend online</strong> — The server is reachable and functioning normally.
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Report Form</h2>
+        <form id="reportForm" class="form" autocomplete="off">
+          <div class="row">
+            <label>City
+              <select id="city" required>
+                <option value="">Select City</option>
+                <option>Metroville</option>
+                <option>Riverside</option>
+              </select>
+            </label>
+
+            <label>Area
+              <select id="area" required>
+                <option value="">Select Area</option>
+                <option>Downtown</option>
+                <option>Northside</option>
+                <option>Suburbs</option>
+              </select>
+            </label>
+          </div>
+
+          <label>Street
+            <input id="street" type="text" placeholder="Street name (e.g., Elm Street)" required />
+          </label>
+
+          <label>Issue Type
+            <select id="issueType" required>
+              <option>Broken Streetlight</option>
+            </select>
+          </label>
+
+          <label>Description (optional)
+            <textarea id="description" placeholder="Add any extra details..."></textarea>
+          </label>
+
+          <label>Reporter Email
+            <input id="email" type="email" placeholder="you@example.com" required />
+          </label>
+
+          <div class="actions">
+            <button id="submitBtn" type="submit" class="btn primary">Submit Report</button>
+            <button type="button" id="clearBtn" class="btn ghost">Clear</button>
+          </div>
+        </form>
+
+        <div id="result" class="result hidden"></div>
+      </section>
+
+      <aside class="card sidebar">
+        <h2>Sensor Simulator</h2>
+        <p>Simulate an LDR reading to validate an existing report.</p>
+
+        <label>Reference ID
+          <input id="simRef" placeholder="e.g., SC-20251224-1234" />
+        </label>
+
+        <label>Lux (light level)
+          <input id="lux" type="number" value="10" />
+        </label>
+
+        <label>Timestamp (ISO, optional)
+          <input id="timestamp" placeholder="leave blank for now" />
+        </label>
+
+        <div class="actions">
+          <button id="sendSensor" class="btn primary">Send Sensor Reading</button>
+        </div>
+
+        <div id="sensorResult" class="result hidden" style="margin-top:10px"></div>
+
+        <hr />
+        <h3>Recent Reports</h3>
+        <ul id="reportsList" class="list"></ul>
+        <div style="margin-top:10px">
+          <button id="downloadData" class="btn ghost">Download reports JSON</button>
+        </div>
+        <div id="solutionBox" class="result hidden" style="margin-top:10px"></div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <small>Smart City Demo • Broken Streetlight • Sensor: LDR</small>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
 </html>

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: smartcity
+      POSTGRES_PASSWORD: smartcity
+      POSTGRES_DB: smartcity
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  backend:
+    build: .
+    command: gunicorn -w 4 -b 0.0.0.0:5000 backend.app:app
+    env_file:
+      - backend/.env.example
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+
+volumes:
+  db-data:

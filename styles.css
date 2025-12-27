@@ -1,0 +1,32 @@
+/* styles.css - colorful, clean UI */
+:root{
+  --bg:#f0f7ff; --card:#ffffff; --accent:#0ea5a4; --accent-2:#6366f1; --muted:#6b7280; --success:#16a34a;
+}
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#e6f7ff 0%,var(--bg) 100%);margin:0;padding:20px}
+.hero{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:26px;border-radius:10px;margin-bottom:18px}
+.hero h1{margin:0 0 6px;font-size:1.6rem}
+.hero .subtitle{margin:0;font-size:.95rem;opacity:.95}
+.grid{display:grid;grid-template-columns:1fr 360px;gap:18px;max-width:1100px;margin:0 auto}
+.card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+.sidebar{position:sticky;top:22px;height:fit-content}
+.form label{display:block;margin-bottom:12px}
+.form input[type=text],.form input[type=email],.form input[type=number],.form input[type=file],.form select,.form textarea{width:100%;padding:10px;border:1px solid #e6eef6;border-radius:8px;margin-top:6px;font-size:0.95rem}
+.row{display:flex;gap:12px}
+.row label{flex:1}
+.actions{display:flex;gap:10px;align-items:center;margin-top:6px}
+.btn{padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+.btn.primary{background:var(--accent-2);color:#fff}
+.btn.ghost{background:transparent;border:1px solid #e6eef6;color:var(--muted)}
+.result{background:#ecfdf5;border:1px solid #bbf7d0;color:#064e3b;padding:12px;border-radius:8px;margin-top:12px}
+.message-box{background:#fff7ed;border:1px solid #fee2b3;color:#854d0e;padding:12px;border-radius:8px;margin-top:12px}
+.solution-list{background:#f8fafc;border:1px solid #e6eef6;padding:10px;border-radius:8px;margin-top:6px}
+.hidden{display:none}
+.list{list-style:none;padding:0;margin:0}
+.list li{padding:8px 6px;border-bottom:1px dashed #eef2ff;font-size:.95rem}
+.footer{max-width:1100px;margin:18px auto 0;color:var(--muted);text-align:center}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#eef2ff;color:var(--accent-2);font-weight:600;font-size:.85rem}
+.status-verified{color:var(--success);font-weight:700}
+.status-open{color:#b45309;font-weight:700}
+.card h2{margin-top:0}
+@media (max-width:900px){.grid{grid-template-columns:1fr;}.sidebar{position:static}}
